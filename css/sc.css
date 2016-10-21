@@ -1,0 +1,23 @@
+/*page*/
+*{margin: 0; padding: 0;box-sizing: border-box;}
+a{text-decoration: none; color: black;}
+body{background: url("../img/bg.jpg"); background-color: bisque}
+
+/*wrap*/
+#wrap {width: 1600px; height; 1080px; margin: 0 auto;}
+
+/*header*/
+.logo {width: 130px; height: 90px; margin: 0 auto;}
+header {width: 1600px; height: 160px;}
+.top {width: 460px; height: 20px; float: right; margin-top:-50px;}
+.top > ul {width: 460px; height: 20px; overflow: hidden; float: right; text-align: center; list-style: none; font-size: 14px;}
+.top > ul > li {width: 70px; height: 10px; float: left;}
+.down {width: 500px; height: 50px; margin: 0 auto; text-decoration: none; position: absolute; z-index: 10; left: 0; right: 0;}
+.down > li{width: 100px; height: 50px; overflow: hidden; float: left; line-height: 50px; text-align: center; background-color: #fff;}
+.down > li:hover {height : auto;}
+.list {border-top: 2px solid #000;}
+section {height: 1000px;}
+.imgslide {width: 1200px; height: 500px; margin: 0 auto; overflow: hidden; position:relative;}
+.imgslide > img {position: absolute; width: 1200px; height: 365px;}
+.footer-li {height: 20px; color: DDDDDD; font-size: 15px; letter-spacing: -0.5px;}
+

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>서울 디지텍 고등학교</title>
+    <link rel="stylesheet" href="../sc/css/sc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+    
+    <div id="wrap">
+    <header>
+        <div class="logo"><img src="./img/logo.png" alt="" class="logo"></div>
+        <nav class="top">
+            <ul>
+                <li><a href="#"><span class="glyphicon glyphicon-home"></span>HOME &nbsp;&nbsp;&nbsp;</a></li>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">사이트맵</a></li>
+            </ul>
+        </nav>
+        <ul class="down">
+            <li>학교 소개
+                <ul class="list">
+                    <a href="#"><li>학교 연혁</li></a>
+                    <a href="#"><li>교훈/상징</li></a>
+                    <a href="#"><li>학교길 안내</li></a>
+                </ul>
+            </li>
+            <li>학과 소개
+                <ul class="list">
+                    <a href="#"><li>게임영상과</li></a>
+                    <a href="#"><li>유비쿼터스과</li></a>
+                    <a href="#"><li>공간정보학과</li></a>
+                </ul>
+            </li>
+            <li>동아리 소개
+                <ul class="list">
+                    <a href="#"><li>ON</li></a>
+                    <a href="#"><li>Team Lugh</li></a>
+                    <a href="#"><li>Smart Space</li></a>
+                    <a href="#"><li>MOD</li></a>
+                    <a href="#"><li>Root</li></a>
+                </ul>
+            </li>
+            <li>입학 안내
+                <ul class="list">
+                    <a href="#"><li>입학안내</li></a>
+                    <a href="#"><li>학교홍보영상</li></a>
+                    <a href="#"><li>입학문의</li></a>
+                </ul>
+            </li>
+            <li>학생 마당
+                <ul class="list">
+                    <a href="#"><li>방과후 활동</li></a>
+                    <a href="#"><li>학교생활규정</li></a>
+                    <a href="#"><li>고민상담</li></a>
+                </ul>
+            </li>
+        </ul>
+    </header>
+    <section>
+        <div class="imgslide">
+            <img src="./img/img1.png" alt="">
+            <img src="./img/img2.png" alt="">
+            <img src="./img/img3.png" alt="">
+        </div>
+    </section>
+    <footer>
+        <ul class="footer-ul">
+            <li class="footer-li">서울특별시 용산구 회나루모 12길 27 서울디지텍고등학교 (우) 140-857</li>
+            <li class="footer-li">TEL : 02 - 798 - 341 ~ 3 Fax : 02 - 794 - 0822</li>
+            <li class="foorer-li">Copyright (c) 2016 김민제 All rights reserved.</li>
+        </ul>
+    </footer>
+    </div>
+</body>
+<script>
+    var imgs = $(".imgslide").children();
+    var sno=0;
+    var last=imgs.length-1;
+    var swidth=1200;
+    $(imgs[sno]).siblings().css({"left" : -swidth});
+    
+    function slide(){
+        if($(imgs[sno]).is(":animated"))return;
+        $(imgs[sno]).siblings().css({"left" : -swidth});
+        $(imgs[sno]).animate({
+            "left" : swidth
+        },1000,function(){
+            $(this).css({"left" : -swidth});  
+        });
+        sno++;
+        if(sno>last) sno=0;
+        $(imgs[sno]).animate({
+            "left" : 0
+        },1000);
+    }
+    setInterval(slide,1000);
+</script>
+</html>
